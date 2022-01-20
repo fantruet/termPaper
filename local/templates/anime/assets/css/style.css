@@ -1,0 +1,565 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    position: relative;
+    min-height: 100%;
+    background-color: #e9ebee;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+ul,
+li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color:#5e5e5e
+}
+.header{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+.header_top{
+    padding-top: 10px;
+    background-color: #343a40;
+    border-bottom: 2px solid red;
+}
+.header_top_fixed{
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 0.7;
+}
+.logo{
+    float: left;
+    padding-right: 13px;
+}
+.button_search{
+    background: none;
+    float: right;
+    color:#fff;
+}
+.button_search::after{
+    font-family: 'icomoon';
+    content: "\e986";
+}
+.button_search_cross{
+    background: none;
+    float: right;
+    color:#fff;
+}
+.button_search_cross::after{
+    font-family: 'icomoon';
+    content: "\ea0f";
+}
+.inputText{
+    transform: scale(0);
+    float: right;
+    width: 30%;
+    height: auto;
+    margin-right: 10px;
+}
+.inputTextVisable{
+    transform: scale(1);
+}
+.header_menu:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.header_menu a:hover{
+    color:#808080;
+}
+.nav-link{
+    color:#fff;
+    transition: .3s;
+    letter-spacing: 0.25px;
+    padding-left: 20px;
+    padding-right: 18px;
+    margin-top: 3px;
+    margin-bottom: 15px;
+}
+.red{
+    padding-top: 2px;
+    background-color: red;
+}
+.header_bot{
+    background-color: #e0e2e5;
+    border-top: 1px solid #d0d2d4;
+}
+.menu li{
+    display: inline-block;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-right: 20px;
+}
+.menu a{
+    color: black;
+}
+.menu a:hover{
+    transition: .3s;
+    color: red;
+}
+.anime_info{
+    background-color: #e9ebee;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.h1{
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-weight: 400;
+    font-size: 32px;
+}
+.more_info{
+    font-weight: 400;
+    font-size: 15.5px;
+    
+}
+.more_info p{
+    line-height: 1.5;
+}
+.slider{
+    background-color: #e0e2e5;
+    padding-bottom: 10px;
+}
+.slider_title{
+    padding-top: 1px;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 1px;
+    background-color: #343a40;
+    border-bottom: 2px solid red;
+    color: #fff;
+}
+/* Слайдер */
+.slick-slider{
+    position: relative;
+    
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track{
+    display: inline-flex;
+}
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{
+    position: absolute;
+    top: 50%;
+    margin: -40px 0px 0px 0px;
+    z-index: 10;
+    font-size: 0;
+    width: 30px;
+    height: 55px;
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev{
+    left: 0;
+    background: url('../img/sl-arrow_l.svg') 0 0 / 100% no-repeat;
+    border:none;
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next{
+    right: 0;
+    background: url('../img/sl-arrow_r.svg') 0 0 /100% no-repeat;
+    border:none;
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{
+}
+/* Точки (булиты) */
+.slick-dots{}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
+.anime{
+    position: absolute;
+    width: 186px;
+    bottom: 1%;
+    color:#fff;
+    background-color: black;
+    opacity: 0.7;
+    text-align: center;
+}
+.viewing{
+    padding-top: 16px;
+    background-color: #e2e2e2;
+    padding-bottom: 16px;
+}
+.divide{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.divide .update-block, .news-block{
+    flex-basis: 49%;
+}
+.update-block-head{
+    padding: 15px;
+    background-color: #343a40;
+    border-bottom: 2px solid red;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+#disabled a{
+    pointer-events: none;
+}
+.update-list a{
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+    width:100%;
+    height:47px;
+    border-bottom:1px solid #eeeeee;
+    overflow: hidden;
+}
+.update-list a:hover .update-date{
+    border-left: 3px solid greenyellow;
+    transition: .1s;
+}
+.first-li{
+    background-color: #ffffff;
+}
+.second-li{
+    background-color: #f5f5f5;
+}
+.update-date{
+    height: 100%;
+    line-height: 3.5em;
+    width:60px;
+    text-align:center;
+    border-right:1px solid #e5e5e5;
+}
+.update-img{
+    top:0;
+    height:100%;
+    width:35px
+}
+.update-list-block{
+    flex: 1;
+}
+.update-info{
+    font-size: 14px;
+    padding: 6px 10px 6px 10px;
+}
+#parent {
+    display: table;
+}
+#child {
+    display: table-cell;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@media screen and (max-width:425px){
+    .slider{
+        display: none;
+    }
+}
+
+
+
+.nameLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    padding: 10px;
+    margin-left: 20px;
+    color: #DC8523;
+    font-size: x-large;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.headerMenu{
+    display: flex;
+    flex-wrap: wrap;
+}
+.navMenu > menu{
+    display: flex;
+    flex-wrap: wrap;
+}
+.navMenu {    
+    margin-right: 20px;
+    flex-wrap: wrap;
+}
+menu > li > a{
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 20px;
+    padding: 5px 0;
+    color: black;
+    border-radius: 10px;
+}
+menu > li > a:hover{
+    background: linear-gradient(to bottom right,#B26C1C, #FF9B28);
+}
+
+/* anime html */
+.main{
+    min-height: 100%;
+    background-color: #e9ebee;
+}
+.catalog-header{
+    padding-top: 15px;
+    color: black;
+    font-weight: 700;
+    text-align: center;
+    font-size: 28px;
+}
+.anime-list{
+    width: 100%;
+    height: 500px;
+    justify-content: space-between;
+    display: flex;
+}
+.anime-in-list{
+    margin-top: 50px;
+    width: 20%;
+    height: max-content;
+    display: flex;
+    flex-flow: column;
+    border: 2px solid #e4e4e4;
+    border-radius: 10px;
+}
+.anime-in-list:hover{
+    transform: scale(1.1)
+}
+.anime-in-list > img{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    flex: 6;
+    border-bottom: 2px solid #e4e4e4;
+}
+.about-anime{
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    color:black;
+}
+.name-title{
+    flex:1;
+    margin: 5px;
+    font-weight: 700;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.description{
+    margin: 5px;
+    flex: 2;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/* shablon html */
+.row{
+    display: flex;
+    flex-flow: column;
+    background-color: #fff;
+    border: 1px solid silver;
+    width: 100%;
+    height: 100%;
+}
+.media-info{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+}
+.image-title{
+    display: flex;
+    flex-flow: column;
+    flex: 1;
+}
+.image-title > a{
+    margin: 15px;
+}
+.image-title > a > img{
+    width: 250px;
+    height: 350px;
+}
+.play{
+    display: flex;
+    flex: 1;
+    border: 1px solid silver;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.play > a{
+    color:black;
+    padding: 10px 60px;
+    border: 1px solid silver;
+    background-color: #ff5c57;
+    font-weight: 700;
+}
+.media-body{
+    flex: 4;
+}
+.anime-title{
+    margin: 20px;
+    color: black;
+    padding: 0 0 10px 10px;
+    border-bottom: 1px solid silver;
+}
+.anime-info{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    width: 96%;
+    margin: 20px;
+}
+.next-date{
+    display: flex;
+    padding-bottom: 15px;
+    border-bottom: 1px solid silver ;
+}
+.next-date > .next{
+    color:#888379;
+    flex:1;
+    margin: 3px;
+}
+.next-date > .date{
+    color: black;
+    flex:1.2;
+    margin: 3px;
+}
+.table-state{
+    display: flex;
+    flex-flow: row;
+    margin: 4px;
+}
+.table-state > .type{
+    color:#888379;
+    flex:1;
+}
+.table-state > .type-inner{
+    color: black;
+    flex:1.2;
+}
+#top-table-state{
+    padding-top: 30px;
+}
+.description-anime{
+    padding: 10px;
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+}
+.main .player{
+    background-color: #252626;
+}
+.player{
+    width: 100%;
+    height: auto;
+}
+.player-title{
+    padding: 40px 0 20px 20px;
+    color:white;
+    font-size: 30px;
+}
+.player > video{
+    width: 100%;
+    height: auto;
+}
+.series-selection{
+    display: flex;
+    flex-flow: row nowrap;
+    height: auto;
+    width: 100%;
+}
+.series-selection > div{
+    padding: 25px;
+    color: white;
+}
+.series-selection > button{
+    border: 1px solid red;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #252626;
+    font-size: 18px;
+    margin: 10px;
+    width: 40px;
+    height: 50px;
+}
+
+
+/* стили для footer */
+body{
+    margin-bottom: 60px !important;
+}
+footer{
+    position:absolute;
+    bottom:0;
+    width: 100%;
+    float: left;
+    padding: 1% 1% 0.4% 1%;
+    background-color: #e9ebee;
+    border-top: 2px solid silver;
+}
+
+footer .social{
+    float: left;
+    width: 50%;
+}
+
+footer .social img{
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-right: 10px;
+}
+
+footer .rights{
+    float: right;
+    width: 50%;
+    text-align: right;
+    font-size: 1.1em;
+}
